@@ -15,6 +15,6 @@ function add(task) {
 
 function find() {
     return db('tasks')
-        .join('projects', 'project_id', 'projects.id')
-    .select('task_description', 'notes', 'tasks.id', 'projects.id', 'project', 'description')
+        .join('projects', 'tasks.project_id', 'projects.id')
+    .select('tasks.description','projects.project', 'projects.description', 'tasks.project_id', 'tasks.id')
 }
