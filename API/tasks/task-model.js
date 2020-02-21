@@ -12,7 +12,6 @@ function add(task) {
     return db('tasks').insert(task)
 }
 
-
 function find() {
     return db('tasks')
         .join('projects', 'tasks.project_id', 'projects.id')

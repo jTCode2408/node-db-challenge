@@ -3,7 +3,6 @@
 const express = require('express')
 const router = express.Router();
 const Projects = require('./project-model.js')
-
 router.get('/', (req, res) => {
     Projects.find()
         .then(getting => {

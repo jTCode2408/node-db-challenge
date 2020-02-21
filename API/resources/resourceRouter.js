@@ -2,7 +2,6 @@
 //get resources
 const express = require('express')
 const router = express.Router()
-
 const Resources = require('./resource-model')
 
 router.get('/', (req, res) => {
