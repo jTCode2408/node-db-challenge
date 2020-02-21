@@ -8,9 +8,7 @@ router.get('/', (req, res) => {
     Projects.find()
         .then(getting => {
             console.log(getting);
-            const { id, project, description, completed } = getting[0]
-            const isComplete = completed ? true : false
-            res.status(200).json({id, project, description, completed})
+            res.status(200).json(getting)
         })
         .catch(err => {
             console.log(err)
