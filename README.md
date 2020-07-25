@@ -1,56 +1,7 @@
-Sprint Challenge: Node DB Sprint
-Description
+
 In this challenge, you design and build a Data Model and a RESTful API that stores data into a Relational Database.
 
-Instructions
-Read these instructions carefully. Understand exactly what is expected before starting this Sprint Challenge.
 
-This is an individual assessment, please work on it alone. It is an opportunity to demonstrate proficiency in the concepts and objectives introduced and practiced in preceding days.
-
-If the instructions are not clear, please seek support from your TL and Instructor on Slack.
-
-The Minimum Viable Product must be completed in three hours.
-
-Follow these steps to set up and work on your project:
-
- Create a forked copy of this project.
- Add your Team Lead as collaborator on Github.
- Clone your forked version of the Repository.
- Create a new Branch on the clone: git checkout -b firstName-lastName.
- Implement the project on this Branch, committing changes regularly.
- Push commits: git push origin firstName-lastName.
-Follow these steps for completing your project.
-
- Submit a Pull-Request to merge firstName-lastName Branch into master on your fork, don't make Pull Requests against Lambda's repository.
- Please don't merge your own pull request.
- Add your Team Lead as a Reviewer on the Pull-request
- Your Team Lead will count the challenge as done by merging the branch into master.
-Commits
-Commit your code regularly and use descriptive messages. This helps both you (in case you ever need to return to old code) and your Team Lead.
-
-Self-Study/Essay Questions
-Demonstrate your understanding of this week's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
-
-- [ ] Explain the difference between `Relational Databases` and `SQL`.
-
----relational db's have a relation with how the data is stored. SQL is query language used to manipulate db's.
-
-- [ ] Why do tables need a `primary key`?
-
----to be uniquely identified and easily indexed.
-
-- [ ] What is the name given to a table column that references the primary key on another table.
-
----foreign key
-
-- [ ] What do we need in order to have a _many to many_ relationship between two tables.
-
----an intermediary table to hold foreign keys referencing primary keys to other tables used
-
-## Minimum Viable Product
-
-Minimum Viable Product
-Take the steps necessary to complete the project from scratch. Start by initializing your project with a package.json and go from there.
 
 Complete the following tasks:
 
@@ -64,6 +15,8 @@ Complete the following tasks:
  when adding a task the client must provide a description, the notes are optional.
  when adding a task the client must provide the id of an existing project.
  for projects and tasks if no value is provided for the completed property, the API should provide a default value of false.
+ 
+ 
  Build an API with endpoints for:
  adding resources.
  retrieving a list of resources.
@@ -71,6 +24,7 @@ Complete the following tasks:
  retrieving a list of projects.
  adding tasks.
  retrieving a list of tasks. The list of tasks should include the project name and project description.
+ 
 Entities
 A project is what needs to be done. We want to store the following data about a project:
 
@@ -91,28 +45,17 @@ A task one of the steps needed to complete the project. We want to store the fol
  a description of what needs to be done. This column is required.
  a notes column to add additional information.
  a boolean that indicates if the task has been completed. This column cannot be NULL, the default value should be false.
-Stretch Problem
-This section is optional and not counted towards MVP. Start working on it after you're done with the main assignment.
 
-Add an endpoint for retrieving a project by its id that returns an object with the following structure:
-
-{
-  id: 1,
-  name: 'project name here',
-  description: 'the project description',
-  completed: false, // or true, the database will return 1 for true and 0 for false, extra code is required to convert a 1 to true and a 0 to false.
   tasks: [
     {
       id: 1,
       description: 'task description',
-      notes: 'the task notes',
-      completed: false // or true
+      notes: 'the task notes'
     },
     {
       id: 7,
       description: 'another task description',
-      notes: 'the task notes',
-      completed: false // or true
+      notes: 'the task notes'
     }
   ],
   resources: [
@@ -128,14 +71,3 @@ Add an endpoint for retrieving a project by its id that returns an object with t
     }
   ]
 }
-Add the remaining CRUD operations for projects and tasks.
-
-Use knex to add data seeding scripts for projects and tasks.
-
-Add support for the concept of contexts. A context is something like at home, at work or at computer. The idea is that some tasks require one or more contexts in order to be worked on. For example, the task of file income taxes may require that you are at home, at computer and online so if you are at work and look at the list of pending tasks you could do in your current context, filing your taxes will not be one of them.
-
-A context can be applied to more than one task. An task can be tied to more than one context, like in the example above.
-
-When retrieving an task by id, add a property that lists all the contexts related to that task.
-
-Good luck and have fun!
