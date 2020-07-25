@@ -21,17 +21,29 @@ This was a project worked on during my time as a Lambda student. The objective w
 | POST   | /api/projects | 
 
 ### Resources
-*Add a project*
+
+*Get all resources*
+| Method | Endpoint      |
+| - | - |
+| GET    | /api/resources| 
+
+*Add a resource*
 | Method | Endpoint      |
 | - | - |
 | POST   | /api/resources| 
 
 ### Tasks
-*Add a project*
+
+*Get all tasks*
+| Method | Endpoint      |
+| - | - |
+| GETT   | /api/tasks    |  
+Complete the following tasks:
+*Add a task*
 | Method | Endpoint      |
 | - | - |
 | POST   | /api/tasks    |  
-Complete the following tasks:
+
 
 
 
