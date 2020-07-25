@@ -40,7 +40,8 @@ Complete the following tasks:
 
 ### Projects schema
 *Requirements: A project can have multiple tasks.  A project can use multiple resources. Example of resources are: computer, conference room, microphone, delivery van.*
-A project is what needs to be done. Table contains following data:
+
+**A project is what needs to be done. Table contains following data:
 
  - a unique ID.
  - a name. This field is required.
@@ -60,7 +61,8 @@ A project is what needs to be done. Table contains following data:
  ```
  
  ### Projects-Resources schema
- A project needs resources to complete. Table contains relational data for connecting projects and resources, as follows:
+ 
+ **A project needs resources to complete. Table contains relational data for connecting projects and resources, as follows:
  
  - reference id.
  - table names to reference.
@@ -69,7 +71,8 @@ A project is what needs to be done. Table contains following data:
  
  ### Resources schema
  *Requirements:  Same resource can be used in multiple projects. When adding a task the client must provide the id of an existing project.*
-A resource is anything needed to complete a project, some examples are: a person, a tool, a meeting room or a software license. Table contains following data:
+
+**A resource is anything needed to complete a project, some examples are: a person, a tool, a meeting room or a software license. Table contains following data:
 
  - a unique ID.
  - a name. Cannot be NULL.
@@ -90,9 +93,9 @@ A resource is anything needed to complete a project, some examples are: a person
 ```
 
 ### Tasks schema
-
 *Requirements: A task belongs to only one project.* 
-A task is one of the steps needed to complete the project. Table contains following data:
+
+**A task is one of the steps needed to complete the project. Table contains following data:
 
  - a unique ID.
  - a description of what needs to be done.Cannot be NULL.
