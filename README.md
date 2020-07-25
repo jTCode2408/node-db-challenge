@@ -68,7 +68,7 @@ A project is what needs to be done. Table contains following data:
  
  
  ### Resources schema
- *Requirements:  Same resource can be used in multiple projects. When adding a task the client must provide the id of an existing project.
+ *Requirements:  Same resource can be used in multiple projects. When adding a task the client must provide the id of an existing project.*
 A resource is anything needed to complete a project, some examples are: a person, a tool, a meeting room or a software license. Table contains following data:
 
  - a unique ID.
@@ -91,7 +91,7 @@ A resource is anything needed to complete a project, some examples are: a person
 
 ### Tasks schema
 
-*Business Rules: A task belongs to only one project.* 
+*Requirements: A task belongs to only one project.* 
 A task is one of the steps needed to complete the project. Table contains following data:
 
  - a unique ID.
