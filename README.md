@@ -37,8 +37,8 @@ This was a project worked on during my time as a Lambda student. The objective w
 *Get all tasks*
 | Method | Endpoint      |
 | - | - |
-| GETT   | /api/tasks    |  
-Complete the following tasks:
+| GET   | /api/tasks    |  
+
 *Add a task*
 | Method | Endpoint      |
 | - | - |
